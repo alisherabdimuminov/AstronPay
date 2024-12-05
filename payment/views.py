@@ -22,6 +22,7 @@ def pay(request: HttpRequest):
         url = "https://astrontest.uz/mypage/api/userid.php"
         data = {"id": app}
         res = requests.post(url=url, json=data)
+        print(res)
         if res.json().get("status") == "success":
             print("transaction checked")
             return Response({
