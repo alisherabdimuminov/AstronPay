@@ -26,7 +26,11 @@ def pay(request: HttpRequest):
             print("transaction checked")
             return Response({
                 "result": {
-                    "allow": True
+                    "allow": True,
+                    "additional": {
+                        "user": "Alisher",
+                        "balance": 1090
+                    }
                 }
             })
         else:
